@@ -3,15 +3,25 @@
 """
 
 # ── טלגרם ──────────────────────────────────────────────────
-# קבל את ה-token מ-@BotFather
 BOT_TOKEN = "8717551595:AAHTM6v0DIbkUyYCuDGYHsjVpaPRQNtiko0"
 
-# ⚠️ אין צורך להגדיר GROUP_IDS!
-# הבוט שומר קבוצות אוטומטית ב-groups.json כשמוסיפים אותו.
-# פשוט הוסף אותו לכל קבוצה שרוצים → הוא יזהה אוטומטית.
+# ה-ID שלך — פאנל הניהול יופיע רק לך
+ADMIN_ID = 6300100326
+
+# ⚠️ אין צורך להגדיר GROUP_IDS — הבוט שומר קבוצות אוטומטית
+
+# ── תוכן הודעות ────────────────────────────────────────────
+# Footer שמופיע בסוף כל הודעה
+FOOTER_TEXT = (
+    "שיווק ופרסום ברמה הגבוהה ביותר + גרפיקות ברמת קצה\n"
+    "@PIXELSAI\n"
+    "שלחו הודעה עכשיו!"
+)
+
+# לינק לכפתור "לערוץ שלנו"
+CHANNEL_LINK = "https://t.me/+xw7AIT7N4RczMWZk"
 
 # ── מטבעות לעקוב ─────────────────────────────────────────
-# מזהי CoinGecko: https://api.coingecko.com/api/v3/coins/list
 COINS = [
     "bitcoin",
     "ethereum",
@@ -28,21 +38,14 @@ COINS = [
 ]
 
 # ── תזמון ─────────────────────────────────────────────────
-PRICE_INTERVAL_MINUTES    = 30   # עדכון מחירים
-RANKING_INTERVAL_MINUTES  = 360  # דירוג Top 10 (כל 6 שעות)
-PUMP_CHECK_INTERVAL_MINUTES = 15 # בדיקת pump/dump
-NEWS_INTERVAL_MINUTES     = 60   # חדשות
+PRICE_INTERVAL_MINUTES      = 30
+RANKING_INTERVAL_MINUTES    = 360
+PUMP_CHECK_INTERVAL_MINUTES = 15
+NEWS_INTERVAL_MINUTES       = 60
 
-# ── התראות מחיר רגילות ────────────────────────────────────
-# שלח התראה כשמטבע משנה יותר מ-X% ב-24 שעות
-PRICE_ALERT_THRESHOLD = 5.0
-
-# ── זיהוי Pump / Dump ─────────────────────────────────────
-# שינוי מחיר מינימלי (%) בין שתי בדיקות רצופות להחשיב כ-pump/dump
-PUMP_PRICE_THRESHOLD = 3.0       # % שינוי מחיר מהיר (בין בדיקות)
-
-# מכפיל נפח מסחר — כמה פעמים גדול יותר מהנורמה כדי להחשיב כחריג
-# 2.0 = נפח גבוה פי 2 מהממוצע
+# ── התראות ────────────────────────────────────────────────
+PRICE_ALERT_THRESHOLD  = 5.0
+PUMP_PRICE_THRESHOLD   = 3.0
 PUMP_VOLUME_MULTIPLIER = 2.0
 
 # ── מקורות חדשות (RSS) ───────────────────────────────────
@@ -50,5 +53,4 @@ RSS_FEEDS = [
     "https://cointelegraph.com/rss",
     "https://decrypt.co/feed",
     "https://cryptonews.com/news/feed/",
-    # "https://bitcoinmagazine.com/.rss/full/",
 ]
